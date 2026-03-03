@@ -9,7 +9,7 @@ import { useQuery } from '@tanstack/react-query';
 import { Alert } from 'react-bootstrap';
 
 function App() {
-  const API_HOST = import.meta.env.VITE_API_HOST ?? 'http://127.0.0.1:8000';
+  const API_HOST = import.meta.env.VITE_API_HOST ?? '';
   const svgRef = useRef<SVGSVGElement | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [hover, setHover] = useState<HoverState | null>(null);
@@ -23,8 +23,7 @@ function App() {
     queryKey: ['shotgrid'],
     enabled: false,
     queryFn: () =>
-      fetch(
-        `${API_HOST}/api/shotgrid?${new URLSearchParams(params)}`,
+      fetch(`${API_HOST}/api/shotgrid?${new URLSearchParams(params)}`,
       ).then((res) => res.json()),
   });
 

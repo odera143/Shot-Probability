@@ -11,7 +11,7 @@ const UserForm = ({
   gridFt: number;
   setGridFt: Dispatch<SetStateAction<number>>;
 }) => {
-  const API_HOST = import.meta.env.VITE_API_HOST ?? 'http://127.0.0.1:8000';
+  const API_HOST = import.meta.env.VITE_API_HOST ?? '';
   const [playerQuery, setPlayerQuery] = useState('');
   const [selectedPlayer, setSelectedPlayer] = useState<{
     id: string;
