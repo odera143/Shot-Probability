@@ -3,6 +3,8 @@
 Visualize NBA players' efficiency from various spots in the half-court. Leveraging `nba_api` and [shotchart.d3.ts](https://github.com/michaelmirandi/shotchart.d3.ts).
 
 ## To Run
+First create .env in project root and add ```VITE_API_HOST=http://127.0.0.1:8000```
+
 
 ### Docker Containers
 1. Run:
